@@ -4,7 +4,6 @@ import HomeBanner from "./components/HomeBanner";
 import ProductCard from "./components/products/ProductCard";
 
 export default function Home() {
-  console.log("asdjka");
   return (
     <div className="p-8">
       <Container>

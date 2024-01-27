@@ -1,6 +1,7 @@
 import Container from "@/app/components/Container";
 import ProductDetail from "./ProductDetail";
 import { product } from "@/utils/product";
+import ListRating from "./ListRating";
 
 interface IPrams {
   productId?: string;
@@ -11,6 +12,10 @@ export default function page({ params }: { params: IPrams }) {
     <div className="p-8">
       <Container>
         <ProductDetail product={product} />
+        <div className="flex flex-col gap-4 mt-20">
+          <div>Add rating</div>
+          <ListRating product={product} />
+        </div>
       </Container>
     </div>
   );
