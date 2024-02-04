@@ -23,6 +23,7 @@ const Button: React.FC<ButtonType> = ({
 }) => {
   return (
     <button
+      onClick={onClick}
       disabled={disabled}
       className={`disabled:opacity-70 
       disabled:cursor-not-allowed 
