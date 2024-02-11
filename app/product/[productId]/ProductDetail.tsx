@@ -35,7 +35,6 @@ const Horizontal = () => {
 export default function ProductDetail({ product }: ProductDetailProps) {
   const { handleAddProductToCart, cartProducts } = useCart();
   const [isProductIncart, setIsProductInCart] = useState(false);
-  const { cartTotalQty } = useCart();
   const router = useRouter();
   const [cartProduct, setCartProduct] = useState<CartProductType>({
     id: product.id,

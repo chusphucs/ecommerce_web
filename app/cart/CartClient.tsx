@@ -6,9 +6,10 @@ import { MdArrowBack } from "react-icons/md";
 import Heading from "../components/Heading";
 import Button from "../components/Button";
 import ItemContent from "./ItemContent";
+import { formatPrice } from "@/utils/formatPrice";
 
 export default function CartClient() {
-  const { cartProducts } = useCart();
+  const { cartProducts, handleClearCart, cartTotalPrice } = useCart();
   if (!cartProducts || cartProducts.length === 0) {
     return (
       <div className="flex flex-col items-center">
@@ -44,12 +45,19 @@ export default function CartClient() {
       </div>
       <div className="flex flex-col md:flex-row justify-between mt-4 ">
         <div className="max-w-[90px]">
-          <Button label="Clear Cart" onClick={() => {}} small outline />
+          <Button
+            label="Clear Cart"
+            onClick={() => {
+              handleClearCart();
+            }}
+            small
+            outline
+          />
         </div>
         <div className="flex flex-col gap-2">
           <div className="text-base font-semibold flex justify-between">
             <span>Subtotal</span>
-            <span>$100</span>
+            <span>{formatPrice(cartTotalPrice)}</span>
           </div>
           <p className="text-slate-500 text-sm">
             Taxes and shipping calculate at checkout
