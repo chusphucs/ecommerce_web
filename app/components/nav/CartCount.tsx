@@ -15,7 +15,7 @@ export default function CartCount() {
       <div>
         <FaCartShopping size={20} />
       </div>
-      <div className="absolute top-[-8px] right-[-6px] rounded-full bg-blue-500 text-white px-1 text-xs opacity-90">
+      <div className="absolute top-[-8px] left-[12px] rounded-full bg-blue-500 text-white px-1 text-xs opacity-90">
         {cartTotalQty}
       </div>
     </div>
