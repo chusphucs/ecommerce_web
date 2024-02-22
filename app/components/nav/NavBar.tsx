@@ -4,6 +4,8 @@ import Container from "../Container";
 import { useCart } from "@/hooks/useCart";
 import CartCount from "./CartCount";
 import Search from "./Search";
+import UserMenu from "./UserMenu";
+import { getCurrentUser } from "@/actions/getCurrentUser";
 
 const NavBar = () => {
   const { cartTotalQty } = useCart();
@@ -18,7 +20,9 @@ const NavBar = () => {
             </div>
             <div className="flex items-center gap-8 md:gap-12">
               <CartCount />
-              <div>UserMenu</div>
+              <div>
+                <UserMenu />
+              </div>
             </div>
           </div>
         </Container>
